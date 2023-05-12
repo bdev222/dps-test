@@ -12,5 +12,11 @@ Run the development server:
 yarn dev
 ```
 
+Run cypress integration test
+
+```bash
+yarn cypress
+```
+
 ### Project screen shot
 ![](./public/dps.gif)
