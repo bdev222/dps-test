@@ -18,5 +18,8 @@ Run cypress integration test
 yarn cypress
 ```
 
+### Deploy site
+You can check the project from [here](https://dps-test.vercel.app/)
+
 ### Project screen shot
 ![](./public/dps.gif)
