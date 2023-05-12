@@ -18,6 +18,7 @@ const OfficeCard: FC<{
 
   return (
     <div
+      data-testid="office-card"
       onClick={() => setExpanded(!expanded)}
       className="rounded-md mb-8 shadow-xl overflow-hidden"
     >

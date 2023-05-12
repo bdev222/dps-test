@@ -53,7 +53,7 @@ const OfficeForm: FC<{
   };
 
   return (
-    <div className="flex flex-col bg-white rounded-md p-5 mb-8">
+    <div data-testid="office-form" className="flex flex-col bg-white rounded-md p-5 mb-8">
       <div className="flex justify-between items-center mb-12">
         <div className="text-md font-medium text-gray100">
           {office ? "Edit Location" : "New Location"}
@@ -66,6 +66,7 @@ const OfficeForm: FC<{
           control={control}
           render={({ field }) =>  
             <Input
+              data-testid="title-input"
               label="Title"
               {...field}
               error={errors?.title?.message}
@@ -77,6 +78,7 @@ const OfficeForm: FC<{
           control={control}
           render={({ field }) =>  
             <Input
+              data-testid="address-input"
               label="Enter the address"
               {...field}
               error={errors?.address?.message}
@@ -91,6 +93,7 @@ const OfficeForm: FC<{
               control={control}
               render={({ field }) =>  
                 <Input
+                  data-testid="fullname-input"
                   label="Full Name"
                   {...field}
                   error={errors?.fullName?.message}
@@ -102,6 +105,7 @@ const OfficeForm: FC<{
               control={control}
               render={({ field }) =>  
                 <Input
+                  data-testid="job-input"
                   label="Job Position"
                   {...field}
                   error={errors?.job?.message}
@@ -113,6 +117,7 @@ const OfficeForm: FC<{
               control={control}
               render={({ field }) =>  
                 <Input
+                  data-testid="email-input"
                   label="Email"
                   {...field}
                   error={errors?.email?.message}
@@ -124,6 +129,7 @@ const OfficeForm: FC<{
               control={control}
               render={({ field }) =>  
                 <Input
+                  data-testid="phone-input"
                   label="Phone"
                   placeholder="(xxx) xxx-xxxx"
                   {...field}
@@ -132,6 +138,7 @@ const OfficeForm: FC<{
               }
             />
             <button
+              data-testid="submit-form-btn"
               type="submit"
               className="bg-sky100 w-16 rounded-md text-white p-2 disabled:bg-gray300"
               disabled={!isValid}

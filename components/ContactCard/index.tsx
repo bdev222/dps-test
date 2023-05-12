@@ -12,7 +12,7 @@ const ContactCard: FC<{
   const { fullName, job, email, phone } = contact;
 
   return (
-    <div className="bg-white p-8 divide-y divide-gray300">
+    <div data-testid="contact-card" className="bg-white p-8 divide-y divide-gray300">
       <div className="mb-4">
         <div className="text-lg font-bold text-gray100">{fullName}</div>
         <div className="text-sm font-light text-gray100 mt-2">{job}</div>
@@ -21,6 +21,7 @@ const ContactCard: FC<{
       </div>
       <div className="flex justify-between items-center pt-4">
         <Button
+          data-testid="edit-button"
           className="flex items-center uppercase"
           icon={<PencilIcon color="#313e4f" width={20} />}
           iconPosition="left"
@@ -31,6 +32,7 @@ const ContactCard: FC<{
           </label>
         </Button>
         <Button
+          data-testid="delete-button"
           className="flex items-center uppercase"
           icon={<TrashIcon color="#fe7b92" width={20} />}
           iconPosition="left"
